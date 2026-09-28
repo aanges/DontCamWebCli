@@ -145,6 +145,15 @@ footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 .foot-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:14px 24px 0;font-size:13px}
 .foot-links a{color:var(--mut);text-decoration:none}
 .foot-links a:hover{color:var(--ink)}
+/* faq */
+.faq details{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px 18px;margin:10px 0;transition:border-color .2s}
+.faq details[open]{border-color:var(--grad1)}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--grad1);font-size:20px;font-weight:400;flex-shrink:0;transition:transform .25s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{color:var(--mut);font-size:14px;line-height:1.6;margin:10px 0 2px}
+.faq details p.mono{font-size:12px;color:var(--ink);background:var(--pill);border:1px solid var(--line);border-radius:8px;padding:8px 12px}
 /* creators */
 .creator{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 24px;max-width:620px;margin:0 auto;flex-wrap:wrap}
 .avatar{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#38bdf8,#6366f1);display:grid;place-items:center;font-family:"Space Grotesk";font-weight:700;font-size:24px;color:#fff;box-shadow:0 10px 26px -8px rgba(56,189,248,.55);flex-shrink:0}

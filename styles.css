@@ -179,6 +179,8 @@ footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 .beta-box{position:relative;overflow:hidden}
 .beta-box::before{content:"";position:absolute;top:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,#38bdf8,#818cf8,transparent)}
 #betaContent .btn{margin-top:4px;padding:15px 34px;font-size:15px}
+.beta-desc{color:var(--mut);font-size:14px;line-height:1.65;max-width:440px;margin:0 auto 22px}
+.beta-feedback{color:var(--mut);font-size:13px;margin-top:10px}
 #betaContent .beta-list{text-align:left;max-width:340px;margin:0 auto 22px}
 .beta-list{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:8px;color:var(--mut);font-size:14px}
 .beta-list li::before{content:"✓ ";color:#38bdf8;font-weight:700}

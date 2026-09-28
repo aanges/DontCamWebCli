@@ -116,6 +116,7 @@ h1{font-family:"Space Grotesk";font-size:clamp(58px,10vw,118px);line-height:.92;
 .dl .cta{position:relative}
 .note{font-size:13px;color:var(--mut);margin-top:12px}
 .note.ready{color:#22c55e;font-weight:600}
+.mobile-note{margin:18px auto 0;max-width:460px;background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.4);color:#fca5a5;border-radius:14px;padding:14px 18px;font-size:14px;line-height:1.55;position:relative}
 .steps{display:flex;gap:18px;justify-content:center;color:var(--mut);font-size:12px;margin-top:20px}
 footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 .foot{display:flex;justify-content:space-between}
@@ -140,5 +141,24 @@ footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 /* tilt musi reagować od razu — nadpisuje wolny transition z .reveal */
 .reveal[data-tilt]{transition:opacity .8s ease,transform .15s ease-out}
 .reveal[data-tilt].in{transition:opacity .8s ease,transform .15s ease-out}
-@media(max-width:720px){.links{display:none}.grid{grid-template-columns:1fr}.face-row{grid-template-columns:1fr 1fr}}
+@media(max-width:720px){
+  .links{display:none}
+  .grid{grid-template-columns:1fr}
+  .face-row{grid-template-columns:1fr 1fr}
+  .hero{padding:64px 20px 10px}
+  .nav-inner{gap:10px}
+  .brand{font-size:15px}
+  .cta .btn-lg{width:100%;justify-content:center}
+  .mini-stats{gap:18px}
+  .creator{flex-wrap:wrap;text-align:center;justify-content:center}
+  .creator .who{text-align:center}
+  .creator .btn,.discord-pill{margin-left:0}
+  .dl{padding:44px 20px;border-radius:20px}
+  .t{min-width:0;flex:1;padding:14px 10px}
+  .timeline{display:flex}
+  .mock-row{grid-template-columns:1fr}
+  .client-dock{flex-wrap:wrap;gap:8px}
+  .section{padding:56px 20px}
+}
+@media(hover:none){.cursor-glow{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}

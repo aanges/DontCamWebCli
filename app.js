@@ -72,6 +72,14 @@ document.querySelectorAll(".timeline .t").forEach(t=>{
   });
 });
 
+// mobile: zamiast pobierania info o braku wersji na telefony
+const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints>1 && Math.min(screen.width,screen.height)<820);
+if(isMobile){
+  document.getElementById("dlCta").hidden = true;
+  document.getElementById("dlNote").hidden = true;
+  document.getElementById("mobileNote").hidden = false;
+}
+
 // downloads
 (function(){
   const c = window.SITE_CONFIG||{};

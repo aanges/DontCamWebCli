@@ -64,6 +64,14 @@ function tiltLauncher(){
 }
 document.documentElement.addEventListener("mouseleave", ()=>{ if(launcher) launcher.style.transform=""; });
 
+// versions: klikany wybór — aktywny kafelek cały na zielono
+document.querySelectorAll(".timeline .t").forEach(t=>{
+  t.addEventListener("click", ()=>{
+    document.querySelectorAll(".timeline .t").forEach(x=>x.classList.remove("on"));
+    t.classList.add("on");
+  });
+});
+
 // downloads
 (function(){
   const c = window.SITE_CONFIG||{};

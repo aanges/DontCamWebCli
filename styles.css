@@ -24,6 +24,14 @@ body{background:var(--bg);color:var(--ink);font-family:Inter,system-ui,sans-seri
 .links a{color:var(--mut);text-decoration:none;font-size:14px;font-weight:500;position:relative;transition:color .2s}
 .links a::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:0;border-radius:2px;background:linear-gradient(90deg,var(--grad1),var(--grad2));transition:width .25s}
 .links a:hover{color:var(--ink)}.links a:hover::after{width:100%}
+.more{position:relative}
+.more-btn{background:none;border:0;color:var(--mut);font-size:14px;font-weight:500;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px;padding:0}
+.more-btn:hover{color:var(--ink)}
+.more-drop{position:absolute;top:calc(100% + 12px);right:0;min-width:170px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:6px;box-shadow:0 24px 50px -12px rgba(0,0,0,.4);opacity:0;visibility:hidden;transform:translateY(-6px);transition:.22s;display:grid}
+.more.open .more-drop,.more:hover .more-drop{opacity:1;visibility:visible;transform:none}
+.more-drop a{padding:9px 13px;border-radius:9px;font-size:13px}
+.more-drop a::after{display:none}
+.more-drop a:hover{background:var(--pill);color:var(--ink)}
 .nav-actions{margin-left:auto;display:flex;gap:8px;align-items:center}
 .lang{display:flex;background:var(--card);border:1px solid var(--line);border-radius:99px;padding:2px}
 .lang button{border:0;background:transparent;padding:6px 12px;border-radius:99px;font-size:12px;font-weight:700;color:var(--mut);cursor:pointer;transition:.25s}
@@ -134,6 +142,9 @@ footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 .foot{display:flex;justify-content:space-between}
 .foot.center{justify-content:center}
 .foot a{color:var(--mut);text-decoration:none}
+.foot-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;padding:14px 24px 0;font-size:13px}
+.foot-links a{color:var(--mut);text-decoration:none}
+.foot-links a:hover{color:var(--ink)}
 /* creators */
 .creator{display:flex;align-items:center;gap:14px;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:22px 24px;max-width:620px;margin:0 auto;flex-wrap:wrap}
 .avatar{width:56px;height:56px;border-radius:18px;background:linear-gradient(135deg,#38bdf8,#6366f1);display:grid;place-items:center;font-family:"Space Grotesk";font-weight:700;font-size:24px;color:#fff;box-shadow:0 10px 26px -8px rgba(56,189,248,.55);flex-shrink:0}

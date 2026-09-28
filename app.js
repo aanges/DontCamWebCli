@@ -80,6 +80,13 @@ if(isMobile){
   document.getElementById("mobileNote").hidden = false;
 }
 
+// more dropdown (dotyk)
+const moreMenu = document.getElementById("moreMenu");
+if(moreMenu){
+  document.getElementById("moreBtn").addEventListener("click", e=>{ e.stopPropagation(); moreMenu.classList.toggle("open"); });
+  document.addEventListener("click", ()=>moreMenu.classList.remove("open"));
+}
+
 // downloads
 (function(){
   const c = window.SITE_CONFIG||{};

@@ -80,6 +80,30 @@ if(isMobile){
   document.getElementById("mobileNote").hidden = false;
 }
 
+// beta gate
+const BETA_PASS = "FaZK6KhPRJND14";
+function unlockBeta(){
+  const v = document.getElementById("betaPass").value;
+  if(v === BETA_PASS){
+    sessionStorage.setItem("dcc-beta", "1");
+    showBeta();
+  } else {
+    const e = document.getElementById("betaErr");
+    e.hidden = false;
+    const box = document.querySelector(".beta-box");
+    box.classList.remove("shake"); void box.offsetWidth; box.classList.add("shake");
+  }
+}
+function showBeta(){
+  document.getElementById("betaLock").hidden = true;
+  const c = document.getElementById("betaContent");
+  c.hidden = false;
+  const u = (window.SITE_CONFIG||{}).BETA_URL;
+  if(u){ const b = document.getElementById("betaDl"); b.href = u; b.onclick = null; }
+}
+document.getElementById("betaPass").addEventListener("keydown", e=>{ if(e.key==="Enter") unlockBeta(); });
+if(sessionStorage.getItem("dcc-beta")==="1") showBeta();
+
 // downloads
 (function(){
   const c = window.SITE_CONFIG||{};

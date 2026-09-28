@@ -29,8 +29,9 @@ let gx=innerWidth/2, gy=200, tx=gx, ty=gy;
 addEventListener("mousemove", e=>{ tx=e.clientX; ty=e.clientY; });
 (function loop(){ gx+=(tx-gx)*.08; gy+=(ty-gy)*.08; glow.style.left=gx+"px"; glow.style.top=gy+"px"; requestAnimationFrame(loop); })();
 
-// magnetic buttons
-document.querySelectorAll(".magnet").forEach(b=>{
+// magnetic buttons (tylko myszka — na dotyku tap przyklejał transform)
+const canHover = matchMedia("(hover:hover) and (pointer:fine)").matches;
+if(canHover) document.querySelectorAll(".magnet").forEach(b=>{
   b.addEventListener("mousemove", e=>{
     const r = b.getBoundingClientRect();
     b.style.transform = `translate(${(e.clientX-r.left-r.width/2)*.14}px,${(e.clientY-r.top-r.height/2)*.2}px)`;
@@ -39,7 +40,7 @@ document.querySelectorAll(".magnet").forEach(b=>{
 });
 
 // spotlight cards
-document.querySelectorAll(".spot").forEach(c=>{
+if(canHover) document.querySelectorAll(".spot").forEach(c=>{
   c.addEventListener("mousemove", e=>{
     const r = c.getBoundingClientRect();
     c.style.setProperty("--mx", (e.clientX-r.left)+"px");
@@ -51,7 +52,7 @@ document.querySelectorAll(".spot").forEach(c=>{
 const launcher = document.getElementById("clientCard");
 const LMAX = 8;
 let lraf = null, lx = innerWidth/2, ly = innerHeight/2;
-addEventListener("mousemove", e=>{ lx=e.clientX; ly=e.clientY; if(!lraf) lraf=requestAnimationFrame(tiltLauncher); }, {passive:true});
+if(canHover) addEventListener("mousemove", e=>{ lx=e.clientX; ly=e.clientY; if(!lraf) lraf=requestAnimationFrame(tiltLauncher); }, {passive:true});
 function tiltLauncher(){
   lraf = null;
   if(!launcher) return;

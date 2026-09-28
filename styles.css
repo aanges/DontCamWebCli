@@ -122,16 +122,13 @@ h1{font-family:"Space Grotesk";font-size:clamp(58px,10vw,118px);line-height:.92;
 .card h3{font-family:"Space Grotesk";font-size:20px;margin:10px 0 8px}
 .card p{color:var(--mut);font-size:14px;line-height:1.6}
 .slim{text-align:center}
-.timeline{display:grid;gap:8px;max-width:560px;margin:0 auto}
-.t{display:flex;align-items:center;gap:14px;border:1px solid var(--line);background:var(--card);border-radius:14px;padding:13px 18px;transition:.25s;cursor:pointer;user-select:none}
-.t i{font-style:normal;color:var(--mut);font-size:18px;transition:.25s}
-.t:hover{transform:translateX(4px)}
-.t:hover i{transform:translateX(3px);color:var(--grad1)}
-.t:active{transform:scale(.99)}
-.t b{font-size:19px;font-family:"Space Grotesk"}
-.t span{margin-left:auto;font-size:12px;color:var(--mut);background:var(--pill);border:1px solid var(--line);border-radius:99px;padding:3px 12px}
+.timeline{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;max-width:640px;margin:0 auto}
+.ver-label{text-align:center;color:var(--mut);font-size:12px;letter-spacing:.22em;text-transform:uppercase;margin-bottom:18px}
+.t{border:1px solid var(--line);background:var(--card);border-radius:14px;padding:12px 22px;transition:.25s;cursor:pointer;user-select:none}
+.t:hover{transform:translateY(-4px);border-color:var(--grad1);box-shadow:0 14px 30px -14px rgba(56,189,248,.5)}
+.t:active{transform:scale(.96)}
+.t b{font-size:17px;font-family:"Space Grotesk"}
 .t.on{background:linear-gradient(135deg,#38bdf8,#6366f1);color:#fff;border:0;box-shadow:0 16px 40px -12px rgba(56,189,248,.55)}
-.t.on span{color:#fff;background:rgba(255,255,255,.18);border-color:transparent}
 /* download */
 .dl{background:linear-gradient(180deg,color-mix(in srgb,var(--card) 60%,#38bdf814),var(--card));border:1px solid var(--line);border-radius:28px;text-align:center;padding:64px 30px;position:relative;overflow:hidden}
 .dl-glow{position:absolute;width:640px;height:320px;background:radial-gradient(ellipse,rgba(56,189,248,.25),transparent 70%);top:-140px;left:50%;transform:translateX(-50%);animation:drift 9s alternate infinite;pointer-events:none}
@@ -176,6 +173,13 @@ footer{padding:30px 0 46px;color:var(--mut);font-size:13px}
 .shake{animation:shake .4s}
 @keyframes shake{20%,60%{transform:translateX(-7px)}40%,80%{transform:translateX(7px)}}
 .beta-ver{color:#38bdf8;font-size:13px;margin-bottom:14px}
+.beta-kicker{color:var(--mut);font-size:12px;letter-spacing:.22em;text-transform:uppercase}
+.beta-big{font-family:"Space Grotesk";font-size:clamp(38px,7vw,54px);letter-spacing:-.03em;background:linear-gradient(92deg,#7dd3fc,#818cf8,#c084fc);-webkit-background-clip:text;background-clip:text;color:transparent;margin:6px 0 2px}
+.beta-testers{color:var(--mut);font-size:13px;margin-bottom:18px}
+.beta-box{position:relative;overflow:hidden}
+.beta-box::before{content:"";position:absolute;top:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,transparent,#38bdf8,#818cf8,transparent)}
+#betaContent .btn{margin-top:4px;padding:15px 34px;font-size:15px}
+#betaContent .beta-list{text-align:left;max-width:340px;margin:0 auto 22px}
 .beta-list{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:8px;color:var(--mut);font-size:14px}
 .beta-list li::before{content:"✓ ";color:#38bdf8;font-weight:700}
 .btn.soon{opacity:.55;cursor:not-allowed;border-style:dashed}

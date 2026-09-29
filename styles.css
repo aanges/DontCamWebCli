@@ -89,16 +89,10 @@ main{margin-left:78px}
 .gal-view img.swap{opacity:0}
 .gal-fallback{position:absolute;inset:0;display:grid;place-items:center;color:var(--mut);font-size:13px}
 .hotspots{position:absolute;inset:0;z-index:2}
-.hotspots button{position:absolute;left:.4%;width:6.2%;top:var(--y);height:9%;transform:translateY(-50%);background:transparent;border:1px solid transparent;border-radius:12px;cursor:pointer;transition:.2s;padding:0}
-.hotspots button:hover{background:rgba(56,189,248,.14);border-color:rgba(56,189,248,.55);box-shadow:0 0 26px -4px rgba(56,189,248,.65)}
-.hotspots button.active{background:rgba(56,189,248,.16);border-color:rgba(56,189,248,.6);box-shadow:0 0 26px -4px rgba(56,189,248,.65)}
+.hotspots button{position:absolute;left:.4%;width:6.2%;top:var(--y);height:9%;transform:translateY(-50%);background:transparent;border:0;cursor:pointer;padding:0;-webkit-tap-highlight-color:transparent}
+.hotspots button:focus-visible{outline:1px solid var(--grad1);outline-offset:-1px}
 .shine{position:absolute;inset:0;background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.1) 45%,transparent 60%);transform:translateX(-100%);animation:shine 7s ease-in-out infinite;pointer-events:none;z-index:3}
 @keyframes shine{55%,100%{transform:translateX(100%)}}
-.gal-overlay{position:absolute;left:14px;right:14px;bottom:14px;z-index:4;display:flex;align-items:center;justify-content:space-between;background:rgba(4,8,18,.72);backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:10px 10px 10px 18px;font-size:13px}
-.gal-overlay span{font-weight:600}
-.gal-arrows{display:flex;gap:8px}
-.gal-arrows button{width:34px;height:34px;border-radius:10px;border:1px solid var(--line);background:transparent;color:var(--ink);cursor:pointer;transition:.2s;font-size:15px;line-height:1}
-.gal-arrows button:hover{border-color:var(--grad1);color:var(--grad1)}
 .stage-shadow{height:40px;margin:18px auto 0;max-width:70%;background:radial-gradient(ellipse,rgba(0,0,0,.45),transparent 70%);filter:blur(12px)}
 [data-tilt]{transform-style:preserve-3d;will-change:transform;transition:transform .25s ease-out}
 .stage{perspective:1200px}

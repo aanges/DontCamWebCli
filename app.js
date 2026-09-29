@@ -69,27 +69,22 @@ document.documentElement.addEventListener("mouseleave", ()=>{ if(launcher) launc
 
 // gallery — podgląd launchera ze zdjęć
 const SHOTS = ["home","versions","profiles","mods","accounts","settings"];
-const SHOT_NAMES = {home:["Strona główna","Home"],versions:["Wersje","Versions"],profiles:["Profile","Profiles"],mods:["Mody","Mods"],accounts:["Konta","Accounts"],settings:["Ustawienia","Settings"]};
 let shotIdx = 0;
 const shotImg = document.getElementById("shotImg");
 if(shotImg){
   SHOTS.forEach(n=>{ const im = new Image(); im.src = "shots/"+n+".png"; });
-  const cap = document.getElementById("shotCap"), fb = document.getElementById("shotFallback");
+  const fb = document.getElementById("shotFallback");
   window.showShot = function(i){
     shotIdx = (i+SHOTS.length)%SHOTS.length;
     const name = SHOTS[shotIdx];
     document.querySelectorAll(".hotspots button").forEach(b=>b.classList.toggle("active", b.dataset.shot===name));
-    cap.dataset.pl = SHOT_NAMES[name][0]; cap.dataset.en = SHOT_NAMES[name][1];
-    cap.textContent = lang==="pl" ? cap.dataset.pl : cap.dataset.en;
     shotImg.classList.add("swap");
     shotImg.onerror = ()=>{ shotImg.style.display="none"; fb.hidden=false; fb.textContent="shots/"+name+".png"; };
     shotImg.onload = ()=>{ shotImg.style.display=""; fb.hidden=true; shotImg.classList.remove("swap"); };
     shotImg.src = "shots/"+name+".png";
-    shotImg.alt = "DontCam Client — "+cap.textContent;
+    shotImg.alt = "DontCam Client — "+name;
   };
   document.querySelectorAll(".hotspots button").forEach(b=>b.addEventListener("click", ()=>showShot(SHOTS.indexOf(b.dataset.shot))));
-  document.getElementById("shotPrev").onclick = ()=>showShot(shotIdx-1);
-  document.getElementById("shotNext").onclick = ()=>showShot(shotIdx+1);
 }
 
 // scrollspy — szyna podąża za sekcją
@@ -113,23 +108,10 @@ if(moreMenu){
   document.addEventListener("click", ()=>moreMenu.classList.remove("open"));
 }
 
-// downloads
-(function(){
-  const c = window.SITE_CONFIG||{};
-  const rl = document.getElementById("repoLink");
-  if(c.GITHUB_REPO && rl) rl.href = c.GITHUB_REPO;
-  let ok=false;
-  if(c.DOWNLOAD_EXE_URL){ dlExe.href=c.DOWNLOAD_EXE_URL; dlExe.onclick=null; ok=true; }
-  if(c.DOWNLOAD_MSI_URL){ dlMsi.href=c.DOWNLOAD_MSI_URL; dlMsi.onclick=null; ok=true; }
-  if(ok){ dlNote.classList.add("ready"); dlNote.textContent = lang==="pl"?"Gotowy do pobrania ✓":"Ready to download ✓"; }
-})();
-function missing(){
-  const c = window.SITE_CONFIG||{};
-  if(!c.DOWNLOAD_EXE_URL && !c.DOWNLOAD_MSI_URL){
-    const n = document.getElementById("dlNote");
-    n.classList.remove("flash"); void n.offsetWidth; n.classList.add("flash");
-    return false;
-  }
-  return true;
+// download: brak przekierowań — tylko czerwony flash notki
+function flashNote(){
+  const n = document.getElementById("dlNote");
+  n.classList.remove("flash"); void n.offsetWidth; n.classList.add("flash");
+  return false;
 }
 applyLang(lang); applyTheme(theme);

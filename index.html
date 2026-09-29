@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>DontCam Client — Minecraft Launcher</title>
-<meta name="description" content="DontCam Client — fast, beautiful Minecraft launcher. Offline & Microsoft, 1.8.9–1.21+, Fabric / Forge." />
+<meta name="description" content="DontCam Client — fast, beautiful Minecraft launcher. Offline & Microsoft, 1.8.9–1.21, Forge / Fabric." />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -49,19 +49,25 @@
 <main id="top">
   <!-- HERO -->
   <section class="wrap hero">
-    <div class="badge reveal"><span class="pulse"></span><span data-pl="v0.1.0 Alpha — Windows 10/11 64-bit" data-en="v0.1.0 Alpha — Windows 10/11 64-bit">v0.1.0 Alpha — Windows 10/11 64-bit</span></div>
-    <h1 class="reveal d1"><span data-pl="GRAJ W" data-en="PLAY">PLAY</span><br /><span class="grad">MINECRAFT</span><br /><span class="stroke" data-pl="bez limitów." data-en="without limits.">without limits.</span></h1>
-    <p class="lead reveal d2" data-pl="DontCam Client to szybki launcher w Tauri 2: konta offline i Microsoft, wersje 1.8.9 – 1.12 z Forge oraz 1.16 – 1.21 z Fabric, profile, mody i start gry w kilka sekund." data-en="DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.">DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.</p>
-    <div class="cta reveal d3">
-      <a href="#download" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz za darmo" data-en="Download free">Download free</span><i>↓</i></a>
-      <a href="#client" class="btn btn-line btn-lg magnet"><span data-pl="Poznaj launchera" data-en="Meet the launcher">Meet the launcher</span></a>
+    <div class="hero-top">
+      <div class="badge reveal"><span class="pulse"></span><span class="mono" data-pl="v0.1.0 Alpha — Windows 10/11" data-en="v0.1.0 Alpha — Windows 10/11">v0.1.0 Alpha — Windows 10/11</span></div>
+      <h1 class="reveal d1"><span data-pl="GRAJ W" data-en="PLAY">PLAY</span> <span class="grad">MINECRAFT</span> <span class="stroke" data-pl="bez limitów." data-en="without limits.">without limits.</span></h1>
+      <p class="lead reveal d2" data-pl="DontCam Client to szybki launcher w Tauri 2: konta offline i Microsoft, wersje 1.8.9 – 1.12 z Forge oraz 1.16 – 1.21 z Fabric, profile, mody i start gry w kilka sekund." data-en="DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.">DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.</p>
+      <div class="cta reveal d3">
+        <a href="#download" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz za darmo" data-en="Download free">Download free</span><i>↓</i></a>
+        <a href="#client" class="btn btn-line btn-lg magnet"><span data-pl="Zobacz launchera" data-en="See the launcher">See the launcher</span></a>
+      </div>
     </div>
-    <div class="mini-stats reveal d4">
-      <div><strong>~15 MB</strong><span>installer</span></div><div><strong>&lt;1 s</strong><span data-pl="start" data-en="launch">launch</span></div><div><strong>1.8.9–1.21</strong><span>versions</span></div><div><strong>100%</strong><span>free</span></div>
+    <div class="hero-strip reveal d4">
+      <div><strong>~15 MB</strong><span>installer</span></div>
+      <div><strong>&lt;1 s</strong><span data-pl="start gry" data-en="game start">game start</span></div>
+      <div><strong>1.8.9–1.21</strong><span>versions</span></div>
+      <div><strong>0 zł</strong><span data-pl="na zawsze" data-en="forever">forever</span></div>
     </div>
+    <div class="scroll-hint reveal d4" aria-hidden="true"><span></span></div>
   </section>
 
-  <!-- EYE-TRACKING LAUNCHER -->
+  <!-- LAUNCHER -->
   <section id="client" class="wrap stage-section">
     <p class="kicker reveal" data-pl="3D tilt — rusz kursorem" data-en="3D tilt — move your cursor">3D tilt — move your cursor</p>
     <div class="stage reveal d1" id="stage">
@@ -94,14 +100,37 @@
 
   <div class="wrap marquee" aria-hidden="true"><div class="track"><span>FABRIC • FORGE • OFFLINE • MICROSOFT • 1.8.9 • 1.12.2 • 1.20.1 • 1.21 • JAVA AUTO • PROFILES • MODS •&nbsp;</span><span>FABRIC • FORGE • OFFLINE • MICROSOFT • 1.8.9 • 1.12.2 • 1.20.1 • 1.21 • JAVA AUTO • PROFILES • MODS •&nbsp;</span></div></div>
 
-  <!-- FEATURES -->
+  <!-- FEATURES BENTO -->
   <section id="features" class="wrap section">
-    <h2 class="reveal" data-pl="Mały. Szybki. Dopracowany." data-en="Small. Fast. Polished.">Small. Fast. Polished.</h2>
-    <div class="grid">
-      <article class="card spot reveal"><div class="n">01</div><h3 data-pl="Konta" data-en="Accounts">Accounts</h3><p data-pl="Offline z poprawnym UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, check posiadania gry, auto-refresh)." data-en="Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, ownership check, auto-refresh).">Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, ownership check, auto-refresh).</p></article>
-      <article class="card spot reveal d1"><div class="n">02</div><h3 data-pl="Wszystkie wersje" data-en="Every version">Every version</h3><p data-pl="Wydania Minecraft od 1.8.9 do 1.21: pełna weryfikacja SHA1, biblioteki, natives i assety, ze wsparciem legacy 1.8.9. Bez snapshotów, bet i alf — tylko stabilne wydania." data-en="Minecraft releases from 1.8.9 to 1.21: full SHA1 verify, libraries, natives and assets, with legacy 1.8.9 support. No snapshots, betas or alphas — stable releases only.">Minecraft releases from 1.8.9 to 1.21: full SHA1 verify, libraries, natives and assets, with legacy 1.8.9 support. No snapshots, betas or alphas — stable releases only.</p></article>
-      <article class="card spot reveal d2"><div class="n">03</div><h3 data-pl="Mody" data-en="Mods">Mods</h3><p data-pl="Forge dla 1.8.9 – 1.12 oraz Fabric dla 1.16 – 1.21. Instalacja jednym klikiem." data-en="Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.">Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.</p></article>
-      <article class="card spot reveal d3"><div class="n">04</div><h3>Java + Profiles</h3><p data-pl="Auto-dobór Javy 8 / 17 / 21, profile z własnym folderem, RAM, rozdzielczość, komendy pre/post." data-en="Auto-pick Java 8 / 17 / 21, profiles with own folders, RAM, resolution, pre/post commands.">Auto-pick Java 8 / 17 / 21, profiles with own folders, RAM, resolution, pre/post commands.</p></article>
+    <div class="sec-head reveal">
+      <p class="kicker left" data-pl="Funkcje" data-en="Features">Features</p>
+      <h2 data-pl="Wszystko gra. Dosłownie." data-en="Everything plays. Literally.">Everything plays. Literally.</h2>
+    </div>
+    <div class="bento">
+      <article class="card spot reveal b-wide">
+        <div class="n">01</div>
+        <h3 data-pl="Konta" data-en="Accounts">Accounts</h3>
+        <p data-pl="Offline z poprawnym UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, check posiadania gry, auto-refresh)." data-en="Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, ownership check, auto-refresh).">Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS → Minecraft Services, ownership check, auto-refresh).</p>
+        <div class="mini-row"><span class="chip"><i></i>Player • offline</span><span class="chip"><i></i>Steve • microsoft</span></div>
+      </article>
+      <article class="card spot reveal d1">
+        <div class="n">02</div>
+        <h3 data-pl="Wydania" data-en="Releases">Releases</h3>
+        <p data-pl="Stabilne wydania 1.8.9 – 1.21 z pełną weryfikacją. Zero snapshotów i alf." data-en="Stable releases 1.8.9 – 1.21, fully verified. Zero snapshots and alphas.">Stable releases 1.8.9 – 1.21, fully verified. Zero snapshots and alphas.</p>
+        <div class="mini-row"><span class="tag mono">1.8.9</span><span class="tag mono">1.12.2</span><span class="tag mono">1.20.1</span><span class="tag mono on">1.21</span></div>
+      </article>
+      <article class="card spot reveal d2">
+        <div class="n">03</div>
+        <h3 data-pl="Mody" data-en="Mods">Mods</h3>
+        <p data-pl="Forge dla 1.8.9 – 1.12 oraz Fabric dla 1.16 – 1.21. Instalacja jednym klikiem." data-en="Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.">Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.</p>
+        <div class="mini-row"><span class="tag">Forge</span><span class="tag on">Fabric</span></div>
+      </article>
+      <article class="card spot reveal d3 b-wide">
+        <div class="n">04</div>
+        <h3>Java + Profiles</h3>
+        <p data-pl="Auto-dobór Javy i profile z własnym folderem, pamięcią RAM i rozdzielczością." data-en="Auto-picked Java plus profiles with own folders, RAM and resolution.">Auto-picked Java plus profiles with own folders, RAM and resolution.</p>
+        <div class="mini-row"><span class="tag mono">Java 8</span><span class="tag mono">Java 17</span><span class="tag mono on">Java 21</span><span class="tag mono">instances/&lt;profil&gt;</span></div>
+      </article>
     </div>
   </section>
 
@@ -121,20 +150,6 @@
     </div>
   </section>
 
-  <!-- CREATORS -->
-  <section id="creators" class="wrap section slim">
-    <h2 class="reveal" data-pl="Twórcy" data-en="Creators">Creators</h2>
-    <div class="creator reveal d1">
-      <div class="avatar">K</div>
-      <div class="who">
-        <strong>Klumm</strong>
-        <span data-pl="Założyciel oraz fundator" data-en="Founder & funder">Founder & funder</span>
-      </div>
-      <a href="https://guns.lol/klumik" target="_blank" rel="noopener" class="btn btn-line magnet"><span>guns.lol/klumik</span><i>↗</i></a>
-      <span class="discord-pill" title="Discord"><i>◉</i> <span class="mono">just.klumm</span> <em data-pl="wkrótce" data-en="soon">soon</em></span>
-    </div>
-  </section>
-
   <!-- FAQ -->
   <section id="faq" class="wrap section slim" style="max-width:760px">
     <h2 class="reveal">FAQ</h2>
@@ -145,7 +160,7 @@
       </details>
       <details>
         <summary data-pl="Jaka Java do jakiej wersji?" data-en="Which Java for which version?">Which Java for which version?</summary>
-        <p class="mono">1.8.9 / 1.12.2 → Java 8 &nbsp;•&nbsp; 1.20.1 → Java 17 &nbsp;•&nbsp; 1.21+ → Java 21</p>
+        <p class="mono">1.8.9 / 1.12.2 → Java 8 &nbsp;•&nbsp; 1.20.1 → Java 17 &nbsp;•&nbsp; 1.21 → Java 21</p>
         <p data-pl="Launcher sam wykrywa i dobiera Javę, ale możesz wskazać własną w Ustawieniach." data-en="The launcher detects and picks Java automatically, or you can point to your own in Settings.">The launcher detects and picks Java automatically, or you can point to your own in Settings.</p>
       </details>
       <details>
@@ -163,33 +178,53 @@
     </div>
   </section>
 
+  <!-- CREATORS -->
+  <section id="creators" class="wrap section slim">
+    <h2 class="reveal" data-pl="Twórcy" data-en="Creators">Creators</h2>
+    <div class="creator reveal d1">
+      <div class="avatar">K</div>
+      <div class="who">
+        <strong>Klumm</strong>
+        <span data-pl="Założyciel oraz fundator" data-en="Founder & funder">Founder & funder</span>
+      </div>
+      <a href="https://guns.lol/klumik" target="_blank" rel="noopener" class="btn btn-line magnet"><span>guns.lol/klumik</span><i>↗</i></a>
+      <span class="discord-pill" title="Discord"><i>◉</i> <span class="mono">just.klumm</span> <em data-pl="wkrótce" data-en="soon">soon</em></span>
+    </div>
+  </section>
+
   <!-- DOWNLOAD -->
   <section id="download" class="wrap section">
     <div class="dl reveal">
       <div class="dl-glow"></div>
-      <h2 data-pl="Gotowy do gry w minutę?" data-en="Ready to play in a minute?">Ready to play in a minute?</h2>
-      <p class="sub" data-pl="Windows 10/11 64-bit. Podepnij pliki z GitHub Releases w config.js." data-en="Windows 10/11 64-bit. Point files from GitHub Releases in config.js.">Windows 10/11 64-bit. Point files from GitHub Releases in config.js.</p>
-      <div class="cta" id="dlCta">
-        <a id="dlExe" href="#" onclick="return missing(event)" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz .exe" data-en="Download .exe">Download .exe</span><i>↓</i></a>
-        <a id="dlMsi" href="#" onclick="return missing(event)" class="btn btn-line btn-lg"><span>.msi</span></a>
+      <div class="dl-grid">
+        <div class="dl-text">
+          <h2 data-pl="Gotowy do gry w minutę?" data-en="Ready to play in a minute?">Ready to play in a minute?</h2>
+          <p class="sub" data-pl="Windows 10/11 64-bit. Jeden instalator, zero konfiguracji." data-en="Windows 10/11 64-bit. One installer, zero config.">Windows 10/11 64-bit. One installer, zero config.</p>
+          <div class="steps mono"><span data-pl="01 pobierz" data-en="01 download">01 download</span><span data-pl="02 wybierz wersję" data-en="02 pick version">02 pick version</span><span data-pl="03 graj" data-en="03 play">03 play</span></div>
+        </div>
+        <div class="dl-actions">
+          <div class="cta" id="dlCta">
+            <a id="dlExe" href="#" onclick="return missing(event)" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz .exe" data-en="Download .exe">Download .exe</span><i>↓</i></a>
+            <a id="dlMsi" href="#" onclick="return missing(event)" class="btn btn-line btn-lg"><span>.msi</span></a>
+          </div>
+          <p id="dlNote" class="note" data-pl="Instalator jeszcze nieopublikowany." data-en="Installer not published yet.">Installer not published yet.</p>
+          <p id="mobileNote" class="mobile-note" hidden>📵 <span data-pl="Launcher nie jest dostępny na telefony — pobierz go na komputerze z Windows." data-en="The launcher isn't available on phones — grab it on a Windows PC.">The launcher isn't available on phones — grab it on a Windows PC.</span></p>
+        </div>
       </div>
-      <p id="dlNote" class="note" data-pl="Instalator jeszcze nieopublikowany." data-en="Installer not published yet.">Installer not published yet.</p>
-      <p id="mobileNote" class="mobile-note" hidden>📵 <span data-pl="Launcher nie jest dostępny na telefony — pobierz go na komputerze z Windows." data-en="The launcher isn't available on phones — grab it on a Windows PC.">The launcher isn't available on phones — grab it on a Windows PC.</span></p>
-      <div class="steps mono"><span data-pl="01 pobierz" data-en="01 download">01 download</span><span data-pl="02 wybierz wersję" data-en="02 pick version">02 pick version</span><span data-pl="03 graj" data-en="03 play">03 play</span></div>
     </div>
   </section>
 </main>
 
-<footer><div class="wrap foot center"><span>© 2026 DontCam Client &nbsp;·&nbsp; <a href="privacy.html" data-pl="Prywatność" data-en="Privacy">Privacy</a></span></div>
-<div class="wrap foot-links">
-  <a href="#client" data-pl="Launcher" data-en="Launcher">Launcher</a>
-  <a href="#features" data-pl="Funkcje" data-en="Features">Features</a>
-  <a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a>
-  <a href="#faq">FAQ</a>
-  <a href="#creators" data-pl="Twórcy" data-en="Creators">Creators</a>
-  <a href="beta.html">Beta</a>
-  <a href="#download" data-pl="Pobierz" data-en="Download">Download</a>
-</div></footer>
+<footer>
+  <div class="wrap foot-grid">
+    <div class="foot-brand"><span class="logo sm"></span><strong>DontCam Client</strong><span class="mono tagline">play minecraft without limits</span></div>
+    <div class="foot-cols">
+      <div><p data-pl="Strona" data-en="Site">Site</p><a href="#client" data-pl="Launcher" data-en="Launcher">Launcher</a><a href="#features" data-pl="Funkcje" data-en="Features">Features</a><a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a><a href="#faq">FAQ</a></div>
+      <div><p data-pl="Więcej" data-en="More">More</p><a href="#creators" data-pl="Twórcy" data-en="Creators">Creators</a><a href="beta.html">Beta</a><a href="privacy.html" data-pl="Prywatność" data-en="Privacy">Privacy</a><a href="#download" data-pl="Pobierz" data-en="Download">Download</a></div>
+    </div>
+  </div>
+  <div class="wrap foot-bottom"><span>© 2026 DontCam Client</span></div>
+</footer>
 
 <script src="config.js"></script>
 <script src="app.js"></script>

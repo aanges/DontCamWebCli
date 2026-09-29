@@ -84,7 +84,7 @@ if(shotImg){
   window.showShot = function(i){
     shotIdx = (i+SHOTS.length)%SHOTS.length;
     const name = SHOTS[shotIdx];
-    document.querySelectorAll(".gal-rail button").forEach(b=>b.classList.toggle("active", b.dataset.shot===name));
+    document.querySelectorAll(".hotspots button").forEach(b=>b.classList.toggle("active", b.dataset.shot===name));
     cap.dataset.pl = SHOT_NAMES[name][0]; cap.dataset.en = SHOT_NAMES[name][1];
     cap.textContent = lang==="pl" ? cap.dataset.pl : cap.dataset.en;
     shotImg.classList.add("swap");
@@ -93,7 +93,7 @@ if(shotImg){
     shotImg.src = "shots/"+name+".png";
     shotImg.alt = "DontCam Client — "+cap.textContent;
   };
-  document.querySelectorAll(".gal-rail button").forEach(b=>b.addEventListener("click", ()=>showShot(SHOTS.indexOf(b.dataset.shot))));
+  document.querySelectorAll(".hotspots button").forEach(b=>b.addEventListener("click", ()=>showShot(SHOTS.indexOf(b.dataset.shot))));
   document.getElementById("shotPrev").onclick = ()=>showShot(shotIdx-1);
   document.getElementById("shotNext").onclick = ()=>showShot(shotIdx+1);
 }
@@ -125,7 +125,11 @@ if(moreMenu){
 })();
 function missing(){
   const c = window.SITE_CONFIG||{};
-  if(!c.DOWNLOAD_EXE_URL && !c.DOWNLOAD_MSI_URL){ dlNote.style.color="#f87171"; setTimeout(()=>dlNote.style.color="",1200); return false; }
+  if(!c.DOWNLOAD_EXE_URL && !c.DOWNLOAD_MSI_URL){
+    const n = document.getElementById("dlNote");
+    n.classList.remove("flash"); void n.offsetWidth; n.classList.add("flash");
+    return false;
+  }
   return true;
 }
 applyLang(lang); applyTheme(theme);

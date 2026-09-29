@@ -17,18 +17,17 @@
 <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
 <div class="grid-bg"></div>
 
-<header class="nav" id="nav">
-  <div class="wrap nav-inner">
+<header class="topbar" id="nav">
+  <div class="wrap bar-inner">
     <a class="brand" href="#top"><span class="logo"></span>DontCam&nbsp;Client</a>
     <nav class="links">
       <a href="#client" data-pl="Podgląd" data-en="Preview">Preview</a>
       <a href="#features" data-pl="Funkcje" data-en="Features">Features</a>
-      <a href="#download" data-pl="Pobierz" data-en="Download">Download</a>
+      <a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a>
+      <a href="#faq">FAQ</a>
       <div class="more" id="moreMenu">
         <button class="more-btn" id="moreBtn"><span data-pl="Więcej" data-en="More">More</span> ▾</button>
         <div class="more-drop">
-          <a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a>
-          <a href="#faq">FAQ</a>
           <a href="#creators" data-pl="Twórcy" data-en="Creators">Creators</a>
           <a href="beta.html">Beta</a>
           <a href="privacy.html" data-pl="Prywatność" data-en="Privacy">Privacy</a>
@@ -48,46 +47,43 @@
 
 <main id="top">
   <!-- HERO -->
-  <section class="wrap hero">
-    <p class="water" aria-hidden="true">DONTCAM</p>
-    <div class="badge reveal"><span class="pulse"></span><span class="mono" data-pl="v0.1.0 Alpha — Windows 10/11" data-en="v0.1.0 Alpha — Windows 10/11">v0.1.0 Alpha — Windows 10/11</span></div>
-    <h1 class="reveal d1"><span data-pl="GRAJ W" data-en="PLAY">PLAY</span> <span class="grad">MINECRAFT</span> <span class="stroke" data-pl="bez limitów." data-en="without limits.">without limits.</span></h1>
-    <p class="lead reveal d2" data-pl="DontCam Client to szybki launcher w Tauri 2: konta offline i Microsoft, wersje 1.8.9 – 1.12 z Forge oraz 1.16 – 1.21 z Fabric, profile, mody i start gry w kilka sekund." data-en="DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.">DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.</p>
-    <div class="cta reveal d3">
-      <a href="#download" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz za darmo" data-en="Download free">Download free</span><i>↓</i></a>
-      <a href="#client" class="btn btn-line btn-lg magnet"><span data-pl="Zobacz w środku" data-en="Look inside">Look inside</span></a>
+  <section class="wrap hero-split">
+    <div class="hero-copy">
+      <div class="badge reveal"><span class="pulse"></span><span class="mono" data-pl="v0.1.0 Alpha — Windows 10/11" data-en="v0.1.0 Alpha — Windows 10/11">v0.1.0 Alpha — Windows 10/11</span></div>
+      <h1 class="reveal d1"><span data-pl="GRAJ W" data-en="PLAY">PLAY</span><br /><span class="grad">MINECRAFT</span><br /><span class="stroke" data-pl="bez limitów." data-en="without limits.">without limits.</span></h1>
+      <p class="lead reveal d2" data-pl="DontCam Client to szybki launcher w Tauri 2: konta offline i Microsoft, wersje 1.8.9 – 1.12 z Forge oraz 1.16 – 1.21 z Fabric, profile, mody i start gry w kilka sekund." data-en="DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.">DontCam Client is a fast Tauri 2 launcher: offline & Microsoft accounts, versions 1.8.9 – 1.12 with Forge and 1.16 – 1.21 with Fabric, profiles, mods and game start in seconds.</p>
+      <div class="cta reveal d3">
+        <a href="#download" class="btn btn-glow btn-lg magnet"><span data-pl="Pobierz za darmo" data-en="Download free">Download free</span><i>↓</i></a>
+        <a href="#client" class="btn btn-line btn-lg magnet"><span data-pl="Zobacz w środku" data-en="Look inside">Look inside</span></a>
+      </div>
+      <div class="hero-mini reveal d4 mono"><span>~15 MB</span><span>&lt;1 s start</span><span>1.8.9–1.21</span><span>0 zł</span></div>
     </div>
-    <div class="hero-line reveal d4">
-      <div><strong>~15 MB</strong><span>installer</span></div>
-      <div><strong>&lt;1 s</strong><span data-pl="start gry" data-en="game start">game start</span></div>
-      <div><strong>1.8.9–1.21</strong><span>versions</span></div>
-      <div><strong>0 zł</strong><span data-pl="na zawsze" data-en="forever">forever</span></div>
+    <div class="hero-shot reveal d2">
+      <div class="float-card"><img src="shots/home.png" alt="DontCam Client" /><span class="float-tag mono">v0.1.0</span><span class="float-tag b mono">fabric + forge</span></div>
     </div>
   </section>
 
   <!-- GALLERY -->
   <section id="client" class="wrap gal-section">
     <div class="sec-head center reveal">
-      <p class="kicker" data-pl="Kliknij ikonę — zobacz ekran" data-en="Click an icon — see the screen">Click an icon — see the screen</p>
+      <p class="kicker" data-pl="Kliknij ikonę na screenie" data-en="Click an icon on the screenshot">Click an icon on the screenshot</p>
       <h2 data-pl="Launcher od środka" data-en="Inside the launcher">Inside the launcher</h2>
     </div>
     <div class="stage reveal d1" id="stage">
       <div class="gal-win" id="clientCard" data-tilt="8">
         <div class="gal-title"><i></i><i></i><i></i><span class="mono">dontcam client</span><b class="live"><u></u>LIVE</b></div>
-        <div class="gal-body">
-          <div class="gal-rail" role="tablist" aria-label="Launcher views">
-            <button data-shot="home" class="active" aria-label="Home"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.5V21h14V9.5"/></svg></button>
-            <button data-shot="versions" aria-label="Versions"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8 12 3 3 8v8l9 5 9-5V8z"/><path d="M3 8l9 5 9-5"/><path d="M12 13v8"/></svg></button>
-            <button data-shot="profiles" aria-label="Profiles"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 20v-1a5 5 0 0 1 5-5h3a5 5 0 0 1 5 5v1"/><circle cx="17.5" cy="9" r="2.2"/><path d="M16 14.6A3.5 3.5 0 0 1 20.5 18v1"/></svg></button>
-            <button data-shot="mods" aria-label="Mods"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 7V5a2 2 0 0 0-4 0v2H7a2 2 0 0 0-2 2v3h2a2 2 0 1 1 0 4H5v3a2 2 0 0 0 2 2h3v-2a2 2 0 1 1 4 0v2h3a2 2 0 0 0 2-2v-3h-2a2 2 0 1 1 0-4h2V9a2 2 0 0 0-2-2h-3z"/></svg></button>
-            <button data-shot="accounts" aria-label="Accounts"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="3"/><path d="M3 20v-1a5 5 0 0 1 5-5h5a5 5 0 0 1 5 5v1"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.4A4 4 0 0 1 21 18.5V20"/></svg></button>
-            <button data-shot="settings" aria-label="Settings"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.9l.1.1a2 2 0 1 1-2.9 2.9l-.1-.1a1.7 1.7 0 0 0-1.9-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1-1.6 1.7 1.7 0 0 0-1.9.3l-.1.1a2 2 0 1 1-2.9-2.9l.1-.1a1.7 1.7 0 0 0 .3-1.9 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.6-1 1.7 1.7 0 0 0-.3-1.9l-.1-.1a2 2 0 1 1 2.9-2.9l.1.1a1.7 1.7 0 0 0 1.9.3h0a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5h0a1.7 1.7 0 0 0 1.9-.3l.1-.1a2 2 0 1 1 2.9 2.9l-.1.1a1.7 1.7 0 0 0-.3 1.9v0a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"/></svg></button>
+        <div class="gal-view">
+          <img id="shotImg" src="shots/home.png" alt="DontCam Client screenshot" />
+          <div class="hotspots" id="hotspots">
+            <button style="--y:14.6%" data-shot="home" class="active" aria-label="Home"></button>
+            <button style="--y:24.4%" data-shot="versions" aria-label="Versions"></button>
+            <button style="--y:34.2%" data-shot="profiles" aria-label="Profiles"></button>
+            <button style="--y:43.9%" data-shot="mods" aria-label="Mods"></button>
+            <button style="--y:53.7%" data-shot="accounts" aria-label="Accounts"></button>
+            <button style="--y:63%" data-shot="settings" aria-label="Settings"></button>
           </div>
-          <div class="gal-view">
-            <img id="shotImg" src="shots/home.png" alt="DontCam Client screenshot" />
-            <div class="gal-fallback mono" id="shotFallback" hidden></div>
-            <div class="shine"></div>
-          </div>
+          <div class="gal-fallback mono" id="shotFallback" hidden></div>
+          <div class="shine"></div>
         </div>
         <div class="gal-cap"><span class="mono" id="shotCap" data-pl="Strona główna" data-en="Home">Home</span><div class="gal-arrows"><button id="shotPrev" aria-label="Previous">←</button><button id="shotNext" aria-label="Next">→</button></div></div>
       </div>
@@ -103,11 +99,11 @@
       <p class="kicker left" data-pl="Funkcje" data-en="Features">Features</p>
       <h2 data-pl="Zbudowany do grania" data-en="Built for playing">Built for playing</h2>
     </div>
-    <div class="feat-list">
-      <article class="feat reveal"><span class="fnum">01</span><div><h3 data-pl="Konta" data-en="Accounts">Accounts</h3><p data-pl="Offline z poprawnym UUID v3 + Microsoft OAuth2 (Xbox → XSTS, check posiadania gry, auto-refresh)." data-en="Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS, ownership check, auto-refresh).">Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS, ownership check, auto-refresh).</p></div><span class="ftag mono">offline + ms</span></article>
-      <article class="feat reveal d1"><span class="fnum">02</span><div><h3 data-pl="Stabilne wydania" data-en="Stable releases">Stable releases</h3><p data-pl="Minecraft 1.8.9 – 1.21 z pełną weryfikacją SHA1. Bez snapshotów i alf." data-en="Minecraft 1.8.9 – 1.21 fully SHA1-verified. No snapshots or alphas.">Minecraft 1.8.9 – 1.21 fully SHA1-verified. No snapshots or alphas.</p></div><span class="ftag mono">1.8.9–1.21</span></article>
-      <article class="feat reveal d2"><span class="fnum">03</span><div><h3 data-pl="Mody" data-en="Mods">Mods</h3><p data-pl="Forge dla 1.8.9 – 1.12 oraz Fabric dla 1.16 – 1.21. Instalacja jednym klikiem." data-en="Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.">Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.</p></div><span class="ftag mono">forge + fabric</span></article>
-      <article class="feat reveal d3"><span class="fnum">04</span><div><h3>Java + Profiles</h3><p data-pl="Auto-dobór Javy 8 / 17 / 21 i profile z własnym folderem, pamięcią i rozdzielczością." data-en="Auto-picked Java 8 / 17 / 21 plus profiles with own folders, memory and resolution.">Auto-picked Java 8 / 17 / 21 plus profiles with own folders, memory and resolution.</p></div><span class="ftag mono">8 / 17 / 21</span></article>
+    <div class="cards4">
+      <article class="fcard spot reveal"><span class="fico">👤</span><h3 data-pl="Konta" data-en="Accounts">Accounts</h3><p data-pl="Offline z poprawnym UUID v3 + Microsoft OAuth2 (Xbox → XSTS, check posiadania gry, auto-refresh)." data-en="Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS, ownership check, auto-refresh).">Offline with correct UUID v3 + Microsoft OAuth2 (Xbox → XSTS, ownership check, auto-refresh).</p></article>
+      <article class="fcard spot reveal d1"><span class="fico">📦</span><h3 data-pl="Stabilne wydania" data-en="Stable releases">Stable releases</h3><p data-pl="Minecraft 1.8.9 – 1.21 z pełną weryfikacją SHA1. Bez snapshotów i alf." data-en="Minecraft 1.8.9 – 1.21 fully SHA1-verified. No snapshots or alphas.">Minecraft 1.8.9 – 1.21 fully SHA1-verified. No snapshots or alphas.</p></article>
+      <article class="fcard spot reveal d2"><span class="fico">🧩</span><h3 data-pl="Mody" data-en="Mods">Mods</h3><p data-pl="Forge dla 1.8.9 – 1.12 oraz Fabric dla 1.16 – 1.21. Instalacja jednym klikiem." data-en="Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.">Forge for 1.8.9 – 1.12 and Fabric for 1.16 – 1.21. One-click install.</p></article>
+      <article class="fcard spot reveal d3"><span class="fico">☕</span><h3>Java + Profiles</h3><p data-pl="Auto-dobór Javy 8 / 17 / 21 i profile z własnym folderem, pamięcią i rozdzielczością." data-en="Auto-picked Java 8 / 17 / 21 plus profiles with own folders, memory and resolution.">Auto-picked Java 8 / 17 / 21 plus profiles with own folders, memory and resolution.</p></article>
     </div>
   </section>
 
@@ -115,22 +111,22 @@
   <section id="versions" class="wrap section slim">
     <h2 class="reveal" data-pl="Jedna apka, każda era" data-en="One app, every era">One app, every era</h2>
     <p class="ver-label reveal" data-pl="Wspierane wersje" data-en="Supported versions">Supported versions</p>
-    <div class="timeline reveal d1 mono">
-      <div class="t on"><b>1.21</b></div>
-      <div class="t"><b>1.20</b></div>
-      <div class="t"><b>1.19</b></div>
-      <div class="t"><b>1.18</b></div>
-      <div class="t"><b>1.17</b></div>
-      <div class="t"><b>1.16</b></div>
-      <div class="t"><b>1.12</b></div>
-      <div class="t"><b>1.8</b></div>
+    <div class="rank reveal d1 mono">
+      <div class="r on"><span class="rk">01</span><b>1.21</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">02</span><b>1.20</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">03</span><b>1.19</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">04</span><b>1.18</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">05</span><b>1.17</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">06</span><b>1.16</b><span class="rt">stable</span></div>
+      <div class="r"><span class="rk">07</span><b>1.12</b><span class="rt">legacy</span></div>
+      <div class="r"><span class="rk">08</span><b>1.8</b><span class="rt">legacy • pvp</span></div>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq" class="wrap section slim" style="max-width:760px">
     <h2 class="reveal">FAQ</h2>
-    <div class="faq reveal d1">
+    <div class="faqrows reveal d1">
       <details open>
         <summary data-pl="Czy launcher jest darmowy?" data-en="Is the launcher free?">Is the launcher free?</summary>
         <p data-pl="Tak, w 100% i bez reklam. Tryb offline działa bez konta Microsoft, a konto z kupionym Minecraftem odblokowuje serwery premium." data-en="Yes, 100% and ad-free. Offline mode works without a Microsoft account, and an account owning Minecraft unlocks premium servers.">Yes, 100% and ad-free. Offline mode works without a Microsoft account, and an account owning Minecraft unlocks premium servers.</p>
@@ -171,7 +167,7 @@
 
   <!-- DOWNLOAD -->
   <section id="download" class="wrap section">
-    <div class="dl-big reveal">
+    <div class="dl-card reveal">
       <div class="dl-glow"></div>
       <p class="mono dl-eyebrow">Windows 10/11 • 64-bit</p>
       <h2 data-pl="Zainstaluj. Kliknij. Graj." data-en="Install. Click. Play.">Install. Click. Play.</h2>
@@ -187,12 +183,18 @@
 </main>
 
 <footer>
-  <div class="wrap foot-grid">
-    <div class="foot-brand"><span class="logo sm"></span><strong>DontCam Client</strong><span class="mono tagline">play minecraft without limits</span></div>
-    <div class="foot-cols">
-      <div><p data-pl="Strona" data-en="Site">Site</p><a href="#client" data-pl="Podgląd" data-en="Preview">Preview</a><a href="#features" data-pl="Funkcje" data-en="Features">Features</a><a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a><a href="#faq">FAQ</a></div>
-      <div><p data-pl="Więcej" data-en="More">More</p><a href="#creators" data-pl="Twórcy" data-en="Creators">Creators</a><a href="beta.html">Beta</a><a href="privacy.html" data-pl="Prywatność" data-en="Privacy">Privacy</a><a href="#download" data-pl="Pobierz" data-en="Download">Download</a></div>
-    </div>
+  <div class="wrap foot-mid">
+    <a class="brand" href="#top"><span class="logo sm"></span>DontCam&nbsp;Client</a>
+    <nav class="flinks">
+      <a href="#client" data-pl="Podgląd" data-en="Preview">Preview</a>
+      <a href="#features" data-pl="Funkcje" data-en="Features">Features</a>
+      <a href="#versions" data-pl="Wersje" data-en="Versions">Versions</a>
+      <a href="#faq">FAQ</a>
+      <a href="#creators" data-pl="Twórcy" data-en="Creators">Creators</a>
+      <a href="beta.html">Beta</a>
+      <a href="privacy.html" data-pl="Prywatność" data-en="Privacy">Privacy</a>
+      <a href="#download" data-pl="Pobierz" data-en="Download">Download</a>
+    </nav>
   </div>
   <div class="wrap foot-bottom"><span>© 2026 DontCam Client</span></div>
 </footer>

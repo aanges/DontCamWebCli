@@ -73,6 +73,31 @@ document.querySelectorAll(".timeline .t").forEach(t=>{
   });
 });
 
+// gallery — podgląd launchera ze zdjęć
+const SHOTS = ["home","versions","profiles","mods","accounts","settings"];
+const SHOT_NAMES = {home:["Strona główna","Home"],versions:["Wersje","Versions"],profiles:["Profile","Profiles"],mods:["Mody","Mods"],accounts:["Konta","Accounts"],settings:["Ustawienia","Settings"]};
+let shotIdx = 0;
+const shotImg = document.getElementById("shotImg");
+if(shotImg){
+  SHOTS.forEach(n=>{ const im = new Image(); im.src = "shots/"+n+".png"; });
+  const cap = document.getElementById("shotCap"), fb = document.getElementById("shotFallback");
+  window.showShot = function(i){
+    shotIdx = (i+SHOTS.length)%SHOTS.length;
+    const name = SHOTS[shotIdx];
+    document.querySelectorAll(".gal-rail button").forEach(b=>b.classList.toggle("active", b.dataset.shot===name));
+    cap.dataset.pl = SHOT_NAMES[name][0]; cap.dataset.en = SHOT_NAMES[name][1];
+    cap.textContent = lang==="pl" ? cap.dataset.pl : cap.dataset.en;
+    shotImg.classList.add("swap");
+    shotImg.onerror = ()=>{ shotImg.style.display="none"; fb.hidden=false; fb.textContent="shots/"+name+".png"; };
+    shotImg.onload = ()=>{ shotImg.style.display=""; fb.hidden=true; shotImg.classList.remove("swap"); };
+    shotImg.src = "shots/"+name+".png";
+    shotImg.alt = "DontCam Client — "+cap.textContent;
+  };
+  document.querySelectorAll(".gal-rail button").forEach(b=>b.addEventListener("click", ()=>showShot(SHOTS.indexOf(b.dataset.shot))));
+  document.getElementById("shotPrev").onclick = ()=>showShot(shotIdx-1);
+  document.getElementById("shotNext").onclick = ()=>showShot(shotIdx+1);
+}
+
 // mobile: zamiast pobierania info o braku wersji na telefony
 const isMobile = /Android|iPhone|iPad|iPod|Mobile/i.test(navigator.userAgent) || (navigator.maxTouchPoints>1 && Math.min(screen.width,screen.height)<820);
 if(isMobile){

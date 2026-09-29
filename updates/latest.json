@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "notes": "DontCam Client v0.1.0 - initial auto-update baseline.",
+  "pub_date": "2026-09-29T17:15:45Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVUQTdUMTE1MTJsa0VzNzJuYWorQVdTbEw5aGJmLzhIeTFWSkIyUEc4TXE5N041T3JMWnM2d0pvN0FIVEFTV3RNdU9NOHRIVE1IeWxNRzFaVFJOUzFUMmRTU1JpN0RSc1FjPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzkwNzAyMDQ2CWZpbGU6RG9udENhbSBDbGllbnRfMC4xLjBfeDY0LXNldHVwLmV4ZQl2ZXJzaW9uOjAuMS4wCmVyeVliNCtOTnY2VmFUM1ZlSlBVQ1BoaS9aK1lFT2lGaEcySEZyTzR4V0I1U09md1YzU2Q0R1JST2lSMFpLWVJhMFFLNmRYR0oxNi80Y2dJRWRkTUJnPT0K",
+      "url": "https://github.com/aanges/DontCamClient-Releases/releases/download/v0.1.0/DontCamClient-0.1.0-x64-setup.exe"
+    }
+  }
+}
